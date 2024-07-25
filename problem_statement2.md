@@ -21,6 +21,8 @@ Given an array **arr** of size **n** which contains elements in range from **0**
 
 **Solution** is: 
 
+
+```cpp
 class Solution {
   public:
     vector<int> duplicates(vector<long long> arr) {
