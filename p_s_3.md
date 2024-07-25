@@ -32,3 +32,42 @@ You don't need to read input or print anything. Your task is to complete the fun
 **Constraints:**  
 1 ≤ N ≤ 105  
 1 ≤ arr[i] ≤ 105
+
+
+```cpp
+class Solution {
+  public:
+    void reArrange(int arr[], int N) {
+        int o =0;
+        int e =0;
+        int ev[N/2]; //  initiating the even array
+        int od[N/2]; // initiating the odd array
+        
+        
+        for(int i=0; i<N; i++){
+            if(arr[i]%2 == 0){
+                ev[e++] = arr[i];
+            }
+            else{
+                od[o++] = arr[i];
+            }
+        }
+        
+        
+        //int out[N];
+        int ee =0;
+        int oo = 1;
+        for(int j =0; j<e; j++){
+               arr[ee] = ev[j];
+               ee = ee+2;
+           }
+           
+        for(int j =0; j<o; j++){
+               arr[oo] = od[j];
+               oo = oo+2;
+           }
+        
+           
+        
+    }
+};
